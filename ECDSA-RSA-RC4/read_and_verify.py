@@ -77,7 +77,7 @@ def get_sk_and_pk():
 if __name__ == "__main__":
     # verify the sig 
     get_ci()
-    # get_sk_and_pk()
+    get_sk_and_pk()
 
 
 
