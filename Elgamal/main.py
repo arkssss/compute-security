@@ -7,7 +7,7 @@ my_alice = AliceDecrypt()
 the_pk, sig = my_alice.get_pk()
 
 # bob 加密text 和 stream_key
-# message = "fangzhou"
+# message = "fangzhou Zhangshuai renzhongjie Qiaopengyu QiuLei WangTianWei"
 message = input("please input the message you want to encrypt\n")
 
 

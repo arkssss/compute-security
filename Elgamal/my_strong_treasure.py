@@ -1,6 +1,4 @@
 """
-author : 方舟
-email : 522500442@qq.com
 for : 密码学作业
 
 一个专门处理字符串ascii之间xor的类

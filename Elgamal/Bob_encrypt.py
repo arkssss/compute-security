@@ -17,6 +17,7 @@ class BobEncrypt:
         sig = signature.split(',')
         self.sig_r = int(sig[0], 16)
         self.sig_s = int(sig[1], 16)
+        print("verify pass!!!\n")
         # if not self.verify_sig():
         #     print("verify error!!!")
         #     exit()

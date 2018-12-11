@@ -7,7 +7,6 @@ from Crypto.PublicKey.ElGamal import generate
 import random
 class BigNumber:
 
-
     @staticmethod
     def get_quick_mi_mod(a, b, mod):
         """
@@ -57,20 +56,14 @@ class BigNumber:
             # Choose a square residue; it will generate a cyclic group of order q.
             g = pow(random.randint(2, primer), 2, primer)
 
-            # We must avoid g=2 because of Bleichenbacher's attack described
-            # in "Generating ElGamal signatures without knowning the secret key",
-            # 1996
             if g in (1, 2):
                 continue
 
             # Discard g if it divides p-1 because of the attack described
-            # in Note 11.67 (iii) in HAC
             if (primer - 1) % g == 0:
                 continue
 
             # g^{-1} must not divide p-1 because of Khadir's attack
-            # described in "Conditions of the generator for forging ElGamal
-            # signature", 2011
             ginv = BigNumber.get_inverse(g, primer)
             if (primer - 1) % ginv == 0:
                 continue

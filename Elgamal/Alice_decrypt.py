@@ -1,6 +1,4 @@
 """
-author : 方舟
-email : 522500442@qq.com
 for : 密码学作业
 
 消息的接受方
@@ -11,7 +9,6 @@ from my_strong_treasure import Decode
 import random
 import hashlib
 from big_number import BigNumber
-hex_seed = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']  # 十六进制的种子
 random_seed = 100  # 控制随机取的整数
 
 
@@ -39,7 +36,7 @@ class AliceDecrypt:
         """
         # 注意在类里 q, p 都是一个int类型 ，而非string
         # 获得 p ,g
-        self.p, self.g = BigNumber.get_bigprime_generator(256)
+        self.p, self.g = BigNumber.get_bigprime_generator(512)
         self.sk = random.randint(2, random_seed)
         self.Ya = BigNumber.get_quick_mi_mod(self.g, self.sk, self.p)
 
